@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ChooseFirstVideoViewController.clickNextButton(_:):ChooseFirstVideoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in VideoEditorViewController.trimVideo():VideoEditorViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "exportSession.error.localizedDescription">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VideoEditorViewController.trimVideo():VideoEditorViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "exportSession.outputURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
