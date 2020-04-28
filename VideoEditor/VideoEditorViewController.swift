@@ -38,9 +38,9 @@ class VideoEditorViewController : UIViewController, UINavigationControllerDelega
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let videoURL = info[UIImagePickerControllerMediaURL] as? URL {
+        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let videoURL = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.mediaURL.rawValue)] as? URL {
             self.videoPlayer = AVPlayer(url: videoURL)
             self.videoLayer = AVPlayerLayer(player: self.videoPlayer)
             self.videoLayer?.videoGravity = .resizeAspect
@@ -68,7 +68,7 @@ class VideoEditorViewController : UIViewController, UINavigationControllerDelega
                 self.endTime.text = String(format:"%@:%@", min, sec)
 //                VideoThumbnailCreator.init().update  7Thumbnails(view: thumbnailContainer, videoURL: videoURL, duration:CMTimeGetSeconds(duration))
                 
-                self.videoPlayer?.addPeriodicTimeObserver(forInterval: CMTimeMake(1, CMTimeScale(NSEC_PER_SEC)), queue: DispatchQueue.main, using: { (time) in
+                self.videoPlayer?.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: CMTimeScale(NSEC_PER_SEC)), queue: DispatchQueue.main, using: { (time) in
                     self.slider.value = Float(CMTimeGetSeconds(time))
                     self.setCurrentDisplayedTimeValue()
                 })
@@ -104,9 +104,9 @@ class VideoEditorViewController : UIViewController, UINavigationControllerDelega
                     return
                 }
                 
-                let start = CMTimeMakeWithSeconds(self.trimStartPosition!, asset.duration.timescale)
-                let duration = CMTimeMakeWithSeconds(self.trimEndPosition! - self.trimStartPosition!, asset.duration.timescale)
-                exportSession?.timeRange = CMTimeRangeMake(start, duration)
+                let start = CMTimeMakeWithSeconds(self.trimStartPosition!, preferredTimescale: asset.duration.timescale)
+                let duration = CMTimeMakeWithSeconds(self.trimEndPosition! - self.trimStartPosition!, preferredTimescale: asset.duration.timescale)
+                exportSession?.timeRange = CMTimeRangeMake(start: start, duration: duration)
                 
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
                     exportSession?.exportAsynchronously(completionHandler: {
@@ -158,7 +158,7 @@ class VideoEditorViewController : UIViewController, UINavigationControllerDelega
                     return
                 }
                 self.setCurrentDisplayedTimeValue()
-                self.videoPlayer?.seek(to: CMTimeMake(Int64(slider.value), 1))
+                self.videoPlayer?.seek(to: CMTimeMake(value: Int64(slider.value), timescale: 1))
             }
         }
         self.videoPlayer?.pause()
@@ -172,7 +172,7 @@ class VideoEditorViewController : UIViewController, UINavigationControllerDelega
     @objc private func playerItemDidReachEnd(notification:Notification) {
         if let item:AVPlayerItem = notification.object as? AVPlayerItem {
             if item == self.videoPlayer?.currentItem {
-                self.videoPlayer?.seek(to: kCMTimeZero)
+                self.videoPlayer?.seek(to: CMTime.zero)
                 self.videoPlayer?.play()
                 self.currentTime.text = "00:00"
             }

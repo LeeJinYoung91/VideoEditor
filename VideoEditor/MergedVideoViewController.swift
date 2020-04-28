@@ -53,7 +53,7 @@ class MergedVideoViewController : UIViewController {
     @objc private func playerItemDidReachEnd(notification:Notification) {
         if let item:AVPlayerItem = notification.object as? AVPlayerItem {
             if item == self.videoPlayer?.currentItem {
-                self.videoPlayer?.seek(to: kCMTimeZero)
+                self.videoPlayer?.seek(to: CMTime.zero)
                 self.videoPlayer?.play()
             }
         }

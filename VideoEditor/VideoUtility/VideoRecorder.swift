@@ -123,10 +123,10 @@ class VideoRecorder : NSObject, AVCaptureFileOutputRecordingDelegate {
             
             captureSession.addOutput(self.movieFileOutput)
             
-            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-            previewLayer?.videoGravity = .resizeAspect
-            previewLayer?.frame = CGRect(x: (targetPreviewView?.frame.origin.x)!, y: (targetPreviewView?.frame.origin.y)!, width: (targetPreviewView?.frame.width)!, height: (targetPreviewView?.frame.height)! - 30)
-            targetPreviewView?.layer.addSublayer(previewLayer!)
+//            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+//            previewLayer?.videoGravity = .resizeAspect
+//            previewLayer?.frame = CGRect(x: (targetPreviewView?.frame.origin.x)!, y: (targetPreviewView?.frame.origin.y)!, width: (targetPreviewView?.frame.width)!, height: (targetPreviewView?.frame.height)! - 30)
+//            targetPreviewView?.layer.addSublayer(previewLayer!)
         
             captureSession.commitConfiguration()
             captureSession.startRunning()

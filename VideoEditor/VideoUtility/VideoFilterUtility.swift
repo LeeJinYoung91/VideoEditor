@@ -28,18 +28,8 @@ class VideoFilterUtility : NSObject {
     }
     
     static let shared:VideoFilterUtility = VideoFilterUtility()
-    func setFilter(asset:AVAsset, filterType:FILTER_TYPE) -> AVVideoComposition {
-        return AVVideoComposition(asset: asset) { (request) in
-            let source = request.sourceImage
-            if let output = self.getFilteredCIImage(ciImage: source, filterType: filterType) {
-                request.finish(with: output, context: nil)
-            } else {
-                request.finish(with: NSError() as Error)
-            }
-        }
-    }
     
-    private func getFilteredCIImage( ciImage:CIImage, filterType:FILTER_TYPE) -> CIImage? {
+    func getFilteredCIImage(_ ciImage: CIImage, filterType: FILTER_TYPE) -> CIImage? {
         switch filterType {
         case .NONE:
             return ciImage.noneEffect()
@@ -67,8 +57,6 @@ class VideoFilterUtility : NSObject {
             return ciImage.hexagonalPixellateEffect()
         case .PIXELLATE:
             return ciImage.pixellateEffect()
-        default:
-            return ciImage.noneEffect()
         }
     }
 }

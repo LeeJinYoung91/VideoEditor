@@ -29,13 +29,13 @@ extension AVAsset {
         let duration = video.timeRange.duration.seconds > audio.timeRange.duration.seconds ? audio.timeRange.duration : video.timeRange.duration
         
         do{
-            try mutableCompositionVideoTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero,duration), of: video, at: kCMTimeZero)
-            try mutableCompositionAudioTrack[0].insertTimeRange(CMTimeRangeMake(kCMTimeZero, duration), of: audio, at: kCMTimeZero)
+            try mutableCompositionVideoTrack[0].insertTimeRange(CMTimeRangeMake(start: CMTime.zero,duration: duration), of: video, at: CMTime.zero)
+            try mutableCompositionAudioTrack[0].insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: duration), of: audio, at: CMTime.zero)
         }catch{
             return nil
         }
         
-        totalVideoCompositionInstruction.timeRange = CMTimeRangeMake(kCMTimeZero,duration)
+        totalVideoCompositionInstruction.timeRange = CMTimeRangeMake(start: CMTime.zero,duration: duration)
         
         return mixComposition
     }

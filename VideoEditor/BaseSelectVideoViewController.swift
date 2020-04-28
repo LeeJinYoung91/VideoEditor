@@ -42,8 +42,8 @@ class BaseSelectVideoViewController : UIViewController, UIImagePickerControllerD
         }
     }
     
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let videoURL = info[UIImagePickerControllerMediaURL] as? URL {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let videoURL = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.mediaURL.rawValue)] as? URL {
             self.videoPlayer = AVPlayer(url: videoURL)
             self.videoLayer = AVPlayerLayer(player: self.videoPlayer)
             self.videoLayer?.videoGravity = .resizeAspect
@@ -61,7 +61,7 @@ class BaseSelectVideoViewController : UIViewController, UIImagePickerControllerD
     @objc private func playerItemDidReachEnd(notification:Notification) {
         if let item:AVPlayerItem = notification.object as? AVPlayerItem {
             if item == self.videoPlayer?.currentItem {
-                self.videoPlayer?.seek(to: kCMTimeZero)
+                self.videoPlayer?.seek(to: CMTime.zero)
                     self.videoPlayer?.play()
             }
         }

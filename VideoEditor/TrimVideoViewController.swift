@@ -27,8 +27,8 @@ class TrimVideoViewController : UIViewController, UIImagePickerControllerDelegat
         videoPlayer?.play()
     }
     
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let videoURL = info[UIImagePickerControllerMediaURL] as? URL {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let videoURL = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.mediaURL.rawValue)] as? URL {
             let videoEditor:UIVideoEditorController = UIVideoEditorController()
             videoEditor.videoPath = videoURL.path
             videoEditor.videoQuality = .typeHigh
@@ -73,7 +73,7 @@ class TrimVideoViewController : UIViewController, UIImagePickerControllerDelegat
     @objc private func playerItemDidReachEnd(notification:Notification) {
         if let item:AVPlayerItem = notification.object as? AVPlayerItem {
             if item == self.videoPlayer?.currentItem {
-                self.videoPlayer?.seek(to: kCMTimeZero)
+                self.videoPlayer?.seek(to: CMTime.zero)
                 self.videoPlayer?.play()
             }
         }

@@ -17,6 +17,7 @@
 		10047FD220DC985A00B834B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10047FD020DC985A00B834B6 /* LaunchScreen.storyboard */; };
 		10047FDD20DC985A00B834B6 /* VideoEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10047FDC20DC985A00B834B6 /* VideoEditorTests.swift */; };
 		10047FE820DC985A00B834B6 /* VideoEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10047FE720DC985A00B834B6 /* VideoEditorUITests.swift */; };
+		1005F56E22714F94009C58AC /* OverlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F56D22714F94009C58AC /* OverlayVideoViewController.swift */; };
 		1013758F20E5E93D00603427 /* VideoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1013758E20E5E93D00603427 /* VideoEditorViewController.swift */; };
 		1013759120E5EABD00603427 /* EditorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1013759020E5EABD00603427 /* EditorHelper.swift */; };
 		1013759320E5EAE800603427 /* VideoThumbnailCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1013759220E5EAE800603427 /* VideoThumbnailCreator.swift */; };
@@ -24,8 +25,9 @@
 		10164C3F210807810090AEAB /* VideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10164C3E210807810090AEAB /* VideoRecorder.swift */; };
 		10164C41210815570090AEAB /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10164C40210815570090AEAB /* RecordViewController.swift */; };
 		1022816520E09E7500346E16 /* BaseSelectVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1022816420E09E7500346E16 /* BaseSelectVideoViewController.swift */; };
-		1022816720E0C48F00346E16 /* SegumentControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1022816620E0C48F00346E16 /* SegumentControlViewController.swift */; };
 		1022816B20E0C6C900346E16 /* TrimVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1022816A20E0C6C900346E16 /* TrimVideoViewController.swift */; };
+		103AC9622264055300895CE8 /* ImportAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AC9612264055300895CE8 /* ImportAudioViewController.swift */; };
+		103AC96422640AA300895CE8 /* uplink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 103AC96322640AA200895CE8 /* uplink.mp3 */; };
 		103AE6A820E32FC100F24203 /* FilterEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AE6A720E32FC100F24203 /* FilterEffect.swift */; };
 		103AE6AB20E3307700F24203 /* VideoFilterUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AE6AA20E3307700F24203 /* VideoFilterUtility.swift */; };
 		103AE6AD20E3441A00F24203 /* VideoFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AE6AC20E3441A00F24203 /* VideoFilterViewController.swift */; };
@@ -40,6 +42,10 @@
 		106CF92220E07A6B0065B429 /* ChooseSecondVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CF92120E07A6B0065B429 /* ChooseSecondVideoViewController.swift */; };
 		106CF92420E07AC80065B429 /* MergedVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CF92320E07AC80065B429 /* MergedVideoViewController.swift */; };
 		106CF92620E086060065B429 /* VideoUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CF92520E086060065B429 /* VideoUtility.swift */; };
+		10E314472457C37800D0E2EF /* AVAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E314462457C37800D0E2EF /* AVAssetExtension.swift */; };
+		10E3144A2457C51000D0E2EF /* SegumentControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E314492457C50F00D0E2EF /* SegumentControlViewController.swift */; };
+		10EEC9832272918F00C4FD7E /* TTSSTTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EEC9822272918F00C4FD7E /* TTSSTTViewController.swift */; };
+		10EEC98722729E6B00C4FD7E /* ScreenRecorderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EEC98522729E6A00C4FD7E /* ScreenRecorderModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +82,7 @@
 		10047FE320DC985A00B834B6 /* VideoEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10047FE720DC985A00B834B6 /* VideoEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditorUITests.swift; sourceTree = "<group>"; };
 		10047FE920DC985A00B834B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1005F56D22714F94009C58AC /* OverlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayVideoViewController.swift; sourceTree = "<group>"; };
 		1013758E20E5E93D00603427 /* VideoEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditorViewController.swift; sourceTree = "<group>"; };
 		1013759020E5EABD00603427 /* EditorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorHelper.swift; sourceTree = "<group>"; };
 		1013759220E5EAE800603427 /* VideoThumbnailCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThumbnailCreator.swift; sourceTree = "<group>"; };
@@ -83,8 +90,9 @@
 		10164C3E210807810090AEAB /* VideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecorder.swift; sourceTree = "<group>"; };
 		10164C40210815570090AEAB /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		1022816420E09E7500346E16 /* BaseSelectVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSelectVideoViewController.swift; sourceTree = "<group>"; };
-		1022816620E0C48F00346E16 /* SegumentControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegumentControlViewController.swift; sourceTree = "<group>"; };
 		1022816A20E0C6C900346E16 /* TrimVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimVideoViewController.swift; sourceTree = "<group>"; };
+		103AC9612264055300895CE8 /* ImportAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportAudioViewController.swift; sourceTree = "<group>"; };
+		103AC96322640AA200895CE8 /* uplink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = uplink.mp3; sourceTree = "<group>"; };
 		103AE6A720E32FC100F24203 /* FilterEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEffect.swift; sourceTree = "<group>"; };
 		103AE6AA20E3307700F24203 /* VideoFilterUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilterUtility.swift; sourceTree = "<group>"; };
 		103AE6AC20E3441A00F24203 /* VideoFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilterViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +112,10 @@
 		106CF92120E07A6B0065B429 /* ChooseSecondVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSecondVideoViewController.swift; sourceTree = "<group>"; };
 		106CF92320E07AC80065B429 /* MergedVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedVideoViewController.swift; sourceTree = "<group>"; };
 		106CF92520E086060065B429 /* VideoUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoUtility.swift; sourceTree = "<group>"; };
+		10E314462457C37800D0E2EF /* AVAssetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAssetExtension.swift; sourceTree = "<group>"; };
+		10E314492457C50F00D0E2EF /* SegumentControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegumentControlViewController.swift; sourceTree = "<group>"; };
+		10EEC9822272918F00C4FD7E /* TTSSTTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSSTTViewController.swift; sourceTree = "<group>"; };
+		10EEC98522729E6A00C4FD7E /* ScreenRecorderModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRecorderModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,33 +170,35 @@
 		10047FC620DC985900B834B6 /* VideoEditor */ = {
 			isa = PBXGroup;
 			children = (
+				10E314482457C45300D0E2EF /* Extension */,
+				10E314452457C35800D0E2EF /* VideoUtility */,
 				10047FCB20DC985900B834B6 /* Main.storyboard */,
 				10047FCE20DC985A00B834B6 /* Assets.xcassets */,
 				10047FD020DC985A00B834B6 /* LaunchScreen.storyboard */,
 				10047FD320DC985A00B834B6 /* Info.plist */,
 				10047FC720DC985900B834B6 /* AppDelegate.swift */,
-				1013759620E62C0000603427 /* VideoViewPresenter.swift */,
 				1013758E20E5E93D00603427 /* VideoEditorViewController.swift */,
 				1013759220E5EAE800603427 /* VideoThumbnailCreator.swift */,
 				1013759020E5EABD00603427 /* EditorHelper.swift */,
 				1022816A20E0C6C900346E16 /* TrimVideoViewController.swift */,
-				1022816620E0C48F00346E16 /* SegumentControlViewController.swift */,
 				1022816420E09E7500346E16 /* BaseSelectVideoViewController.swift */,
 				10047FC920DC985900B834B6 /* ChooseFirstVideoViewController.swift */,
 				106CF92120E07A6B0065B429 /* ChooseSecondVideoViewController.swift */,
 				106CF92320E07AC80065B429 /* MergedVideoViewController.swift */,
 				103AE6AC20E3441A00F24203 /* VideoFilterViewController.swift */,
 				10013EE320E1D11C00C37ECC /* PhotoLibraryCollectionViewController.swift */,
+				10E314492457C50F00D0E2EF /* SegumentControlViewController.swift */,
 				10013EE620E1D17000C37ECC /* PhotoThumbnail.swift */,
 				10013EE520E1D17000C37ECC /* PhotoThumbnail.xib */,
-				106CF92520E086060065B429 /* VideoUtility.swift */,
-				103AE6AA20E3307700F24203 /* VideoFilterUtility.swift */,
-				103AE6A720E32FC100F24203 /* FilterEffect.swift */,
 				1049678720F5C2F4007CE053 /* AvassetExtension.swift */,
 				1049677920F59B5F007CE053 /* SAVideoRangeSlider */,
 				1049678620F59BAD007CE053 /* Swift-Objc-Bridge-Header.h */,
-				10164C3E210807810090AEAB /* VideoRecorder.swift */,
 				10164C40210815570090AEAB /* RecordViewController.swift */,
+				103AC9612264055300895CE8 /* ImportAudioViewController.swift */,
+				1005F56D22714F94009C58AC /* OverlayVideoViewController.swift */,
+				103AC96322640AA200895CE8 /* uplink.mp3 */,
+				10EEC9822272918F00C4FD7E /* TTSSTTViewController.swift */,
+				10EEC98522729E6A00C4FD7E /* ScreenRecorderModule.swift */,
 			);
 			path = VideoEditor;
 			sourceTree = "<group>";
@@ -230,6 +244,26 @@
 				1049678120F59B5F007CE053 /* SAResizibleBubble.h */,
 			);
 			path = SAVideoRangeSlider;
+			sourceTree = "<group>";
+		};
+		10E314452457C35800D0E2EF /* VideoUtility */ = {
+			isa = PBXGroup;
+			children = (
+				10164C3E210807810090AEAB /* VideoRecorder.swift */,
+				106CF92520E086060065B429 /* VideoUtility.swift */,
+				103AE6AA20E3307700F24203 /* VideoFilterUtility.swift */,
+				103AE6A720E32FC100F24203 /* FilterEffect.swift */,
+			);
+			path = VideoUtility;
+			sourceTree = "<group>";
+		};
+		10E314482457C45300D0E2EF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				10E314462457C37800D0E2EF /* AVAssetExtension.swift */,
+				1013759620E62C0000603427 /* VideoViewPresenter.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +373,7 @@
 				10047FD220DC985A00B834B6 /* LaunchScreen.storyboard in Resources */,
 				10013EE720E1D17100C37ECC /* PhotoThumbnail.xib in Resources */,
 				10047FCF20DC985A00B834B6 /* Assets.xcassets in Resources */,
+				103AC96422640AA300895CE8 /* uplink.mp3 in Resources */,
 				10047FCD20DC985900B834B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,19 +404,24 @@
 				106CF92620E086060065B429 /* VideoUtility.swift in Sources */,
 				10164C41210815570090AEAB /* RecordViewController.swift in Sources */,
 				1049678820F5C2F4007CE053 /* AvassetExtension.swift in Sources */,
+				10E314472457C37800D0E2EF /* AVAssetExtension.swift in Sources */,
+				10EEC98722729E6B00C4FD7E /* ScreenRecorderModule.swift in Sources */,
 				10013EE820E1D17100C37ECC /* PhotoThumbnail.swift in Sources */,
 				103AE6AD20E3441A00F24203 /* VideoFilterViewController.swift in Sources */,
 				10013EE420E1D11C00C37ECC /* PhotoLibraryCollectionViewController.swift in Sources */,
 				1022816520E09E7500346E16 /* BaseSelectVideoViewController.swift in Sources */,
 				1049678420F59B5F007CE053 /* SAResizibleBubble.m in Sources */,
+				103AC9622264055300895CE8 /* ImportAudioViewController.swift in Sources */,
 				1022816B20E0C6C900346E16 /* TrimVideoViewController.swift in Sources */,
+				1005F56E22714F94009C58AC /* OverlayVideoViewController.swift in Sources */,
+				10EEC9832272918F00C4FD7E /* TTSSTTViewController.swift in Sources */,
 				1049678520F59B5F007CE053 /* SASliderRight.m in Sources */,
 				1049678220F59B5F007CE053 /* SAVideoRangeSlider.m in Sources */,
 				106CF92420E07AC80065B429 /* MergedVideoViewController.swift in Sources */,
-				1022816720E0C48F00346E16 /* SegumentControlViewController.swift in Sources */,
 				1013759720E62C0000603427 /* VideoViewPresenter.swift in Sources */,
 				103AE6A820E32FC100F24203 /* FilterEffect.swift in Sources */,
 				10047FCA20DC985900B834B6 /* ChooseFirstVideoViewController.swift in Sources */,
+				10E3144A2457C51000D0E2EF /* SegumentControlViewController.swift in Sources */,
 				10164C3F210807810090AEAB /* VideoRecorder.swift in Sources */,
 				1049678320F59B5F007CE053 /* SASliderLeft.m in Sources */,
 				1013758F20E5E93D00603427 /* VideoEditorViewController.swift in Sources */,
@@ -571,7 +611,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.anipen.VideoEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "VideoEditor/Swift-Objc-Bridge-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -591,7 +631,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.anipen.VideoEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "VideoEditor/Swift-Objc-Bridge-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

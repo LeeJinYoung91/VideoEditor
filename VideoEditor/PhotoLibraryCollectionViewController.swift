@@ -96,15 +96,16 @@ class PhotoLibraryCollectionViewController : UICollectionViewController, UIColle
                 assetList.append(AVAsset(url: videoURL))
             }
         }
-        VideoUtility.shared.mergedVideo(videos: assetList, successListener: { (videoURL) in
+        
+        VideoUtility.shared.mergedVideo(videos: assetList, saveFolder: "temp", videoTitle: "mergeVideo", successListener: { (videoURL) in
             if let mergedViewController:MergedVideoViewController = self.storyboard?.instantiateViewController(withIdentifier: "id_mergeVideo") as? MergedVideoViewController {
                 mergedViewController.bindMergedVideoURL(url: videoURL)
                 alert.dismiss(animated: true, completion: {
                     self.navigationController?.pushViewController(mergedViewController, animated: true)
                 })
             }
-        }, errorListener: {
+        }) { (err) in
             alert.dismiss(animated: true, completion: nil)
-        })
+        }
     }
 }

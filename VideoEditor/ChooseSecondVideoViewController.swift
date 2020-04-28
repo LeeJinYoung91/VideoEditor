@@ -40,7 +40,7 @@ class ChooseSecondVideoViewController: BaseSelectVideoViewController {
                 return
             }
             
-            VideoUtility.shared.mergedVideo(videos: [AVAsset(url: firstVideoURL!), AVAsset(url: videoURL)], successListener: { (videoURL) in
+            VideoUtility.shared.mergedVideo(videos: [AVAsset(url: firstVideoURL!), AVAsset(url: videoURL)], saveFolder: "temp", videoTitle: "title",  successListener: { (videoURL) in
                 if let mergedViewController:MergedVideoViewController = self.storyboard?.instantiateViewController(withIdentifier: "id_mergeVideo") as? MergedVideoViewController {
                     mergedViewController.bindMergedVideoURL(url: videoURL)
                     self.navigationController?.pushViewController(mergedViewController, animated: true)

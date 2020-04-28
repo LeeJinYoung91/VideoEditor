@@ -25,7 +25,7 @@ class VideoFilterViewController : BaseSelectVideoViewController {
         super.openVideoPicker()
     }
     
-    override func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    override func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         super.imagePickerController(picker, didFinishPickingMediaWithInfo: info)
         buttonContainer.isHidden = false
         selectButton.isHidden = true
@@ -65,7 +65,7 @@ class VideoFilterViewController : BaseSelectVideoViewController {
     
     private func startFilterMovie(type:VideoFilterUtility.FILTER_TYPE) {
         if let videoAsset = self.videoPlayer?.currentItem?.asset {
-            self.videoPlayer?.currentItem?.videoComposition = VideoFilterUtility.shared.setFilter(asset: videoAsset, filterType: type)
+            self.videoPlayer?.currentItem?.videoComposition = videoAsset.setFilter(filterType: type)
         }
     }
 }
